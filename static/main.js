@@ -131,7 +131,7 @@ function update() {
     // moonMesh.position.set(x + starMesh.position.x, y + starMesh.position.y, z);
     // moonMesh.rotation.y = moonRotY;
 }
-
+var X = "Jayesh";
 function render() {
     update();
     
@@ -139,6 +139,12 @@ function render() {
     renderer.render(scene, camera);
     // Schedule another frame
     requestAnimationFrame(render);
+}
+
+function greeting() {
+
+    document.getElementById('greeting').innerHTML = "Welcome, Mr." + X;
+
 }
 
 
@@ -163,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 // initMoon();
                 initLight();
                 initPlane();
-
+                greeting();
                 requestAnimationFrame(render);
                     
 
